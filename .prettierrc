@@ -2,7 +2,9 @@
   // 一行最多 80 字符
   "printWidth": 80,
   // 使用 4 个空格缩进
-  "tabWidth": 4,
+  "tabWidth": 2,
+  // 换行符使用 lf
+  "endOfLine": "auto",
   // 不使用 tab 缩进，而使用空格
   "useTabs": false,
   // 行尾需要有分号
@@ -30,7 +32,5 @@
   // 使用默认的折行标准
   "proseWrap": "preserve",
   // 根据显示样式决定 html 要不要折行
-  "htmlWhitespaceSensitivity": "css",
-  // 换行符使用 lf
-  "endOfLine": "auto"
+  "htmlWhitespaceSensitivity": "css"
 }
