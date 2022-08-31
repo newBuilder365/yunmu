@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
   // {
@@ -12,19 +12,19 @@ const routes: Array<RouteRecordRaw> = [
   // component: () => import('@/pages/login.vue')
   // },
   {
-   path: '/home',
-   name: 'Index',
-   meta: {
-     title: '首页',
-     keepAlive: true,
-     requireAuth: true
+    path: "/home",
+    name: "Index",
+    meta: {
+      title: "首页",
+      keepAlive: true,
+      requireAuth: true,
     },
-   component: () => import('@/pages/home.vue')
-  }
-]
+    component: () => import("@/pages/home.vue"),
+  },
+];
 
 const router = createRouter({
- history: createWebHistory(),
- routes
+  history: createWebHistory(),
+  routes,
 });
 export default router;
