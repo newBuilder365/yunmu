@@ -78,7 +78,7 @@ import {
   Fold,
 } from "@element-plus/icons-vue";
 
-const isCollapse = ref(true);
+const isCollapse = ref(false);
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
@@ -96,11 +96,11 @@ const onFold = () => {
 <style scoped>
 .main-menu-title {
   height: var(--main-header-height);
-  background-color: skyblue;
+  background-color: var(--main-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: blue;
+  color: #fff;
   font-size: 18px;
 }
 .main-menu-title .el-icon {

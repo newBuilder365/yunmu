@@ -1,8 +1,8 @@
 :root {
-  --main-bg-color: #fff;
+  --main-bg-color: rgb(62, 62, 116);
   /* 整体框架样式 */
-  --main-header-height: 60px;
-  --main-footer-height: 40px;
+  --main-header-height: 55px;
+  --main-footer-height: 30px;
 }
 
 body {
