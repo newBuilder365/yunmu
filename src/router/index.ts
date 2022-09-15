@@ -34,4 +34,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+router.beforeEach((to, from, next) => {
+  console.log("to", to);
+  if (to.path === "/") next({ name: "Login" });
+  else next();
+});
 export default router;
