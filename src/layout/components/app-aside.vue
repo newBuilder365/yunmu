@@ -1,8 +1,12 @@
 <template>
-  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-    <el-radio-button :label="false">e</el-radio-button>
-    <el-radio-button :label="true">c</el-radio-button>
-  </el-radio-group>
+  <div class="main-menu-title">
+    <el-icon v-if="isCollapse" @click="onExpand"><Expand /></el-icon>
+    <div v-else class="expand-title">
+      <el-icon><icon-menu /></el-icon>
+      <span>功能菜单</span>
+      <el-icon @click="onFold"><Fold /></el-icon>
+    </div>
+  </div>
   <el-menu
     default-active="2"
     class="el-menu-vertical-demo"
@@ -70,6 +74,8 @@ import {
   Menu as IconMenu,
   Location,
   Setting,
+  Expand,
+  Fold,
 } from "@element-plus/icons-vue";
 
 const isCollapse = ref(true);
@@ -79,11 +85,48 @@ const handleOpen = (key: string, keyPath: string[]) => {
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
+const onExpand = () => {
+  isCollapse.value = false;
+};
+const onFold = () => {
+  isCollapse.value = true;
+};
 </script>
 
-<style>
+<style scoped>
+.main-menu-title {
+  height: var(--main-header-height);
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-size: 18px;
+}
+.main-menu-title .el-icon {
+  cursor: pointer;
+}
+.expand-title {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+.expand-title span {
+  margin-left: 10px;
+  margin-right: 90px;
+}
+
+.el-menu-vertical-demo {
+  height: calc(100% - var(--main-header-height));
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.el-menu-vertical-demo::-webkit-scrollbar {
+  width: 1px;
+}
+
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
+  width: 250px;
   min-height: 400px;
 }
 </style>
