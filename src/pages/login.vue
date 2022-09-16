@@ -63,14 +63,21 @@ const onSubmit = () => {
   height: 60px;
   text-align: center;
   font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .main-login .main-login-form {
   width: 380px;
   height: 200px;
-  padding: 0 60px;
-  /deep/.el-form-item__label {
-    color: #fff;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-login .main-login-form .el-form {
+  width: 100%;
 }
 
 .main-login .main-login-form .el-button {
