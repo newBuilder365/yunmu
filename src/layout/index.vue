@@ -31,7 +31,6 @@ import AppFooter from "./components/app-footer.vue";
   color: var(--el-color-primary);
 }
 .common-layout .el-aside {
-  background: var(--main-bg-color);
   width: auto;
   height: 100vh;
   overflow: hidden;

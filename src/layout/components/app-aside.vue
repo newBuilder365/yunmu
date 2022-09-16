@@ -8,7 +8,6 @@
     </div>
   </div>
   <el-menu
-    default-active="2"
     class="el-menu-vertical-demo"
     :collapse="isCollapse"
     @open="handleOpen"
@@ -17,16 +16,12 @@
     <el-sub-menu index="1">
       <template #title>
         <el-icon><location /></el-icon>
+        <component
+          :is="$icon['Edit']"
+          style="width: 1.5em; height: 1.5em; margin-right: 8px; color: #123456"
+        ></component>
         <span>Navigator One</span>
       </template>
-      <el-menu-item-group>
-        <template #title><span>Group One</span></template>
-        <el-menu-item index="1-1">item one</el-menu-item>
-        <el-menu-item index="1-2">item two</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group title="Group Two">
-        <el-menu-item index="1-3">item three</el-menu-item>
-      </el-menu-item-group>
       <el-sub-menu index="1-4">
         <template #title><span>item four</span></template>
         <el-menu-item index="1-4-1">item one</el-menu-item>
@@ -77,6 +72,8 @@ import {
   Expand,
   Fold,
 } from "@element-plus/icons-vue";
+import { useGlobalStore } from "@/store/global";
+const userGlobal = useGlobalStore();
 
 const isCollapse = ref(false);
 const handleOpen = (key: string, keyPath: string[]) => {
