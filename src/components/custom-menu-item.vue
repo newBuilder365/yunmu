@@ -2,7 +2,7 @@
   <!-- 没有子节点，使用 el-menu-item 渲染 -->
   <el-menu-item
     v-if="!item['children'] || !item['children'].length"
-    :index="item['code']"
+    :index="item['url'] || item['code']"
   >
     <el-icon v-if="item['icon']">
       <Component :is="$icon[item['icon']]" />

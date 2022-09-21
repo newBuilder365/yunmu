@@ -21,4 +21,8 @@ const props = defineProps({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.el-menu {
+  border-right: none;
+}
+</style>

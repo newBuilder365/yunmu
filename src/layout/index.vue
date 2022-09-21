@@ -41,8 +41,9 @@ const userGlobal = useGlobalStore();
   transition-duration: 0.3s;
 }
 .common-layout .el-header {
-  height: var(--main-header-height);
+  height: calc(var(--main-subHeader-height) + var(--main-header-height));
   background: var(--main-bg-color);
+  --el-header-padding: 0px;
 }
 
 .common-layout .el-container {
@@ -50,16 +51,18 @@ const userGlobal = useGlobalStore();
 }
 
 .common-layout .el-container .el-main {
-  padding: 0;
   width: auto;
+  background-color: #eaeaea;
+  /* padding: 7px 0 7px 7px; */
+  padding: 7px;
 }
 
 .common-layout .el-container .el-footer {
-  background-color: #eaeaea;
+  background: var(--main-bg-color);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: var(--main-footer-height);
-  /* display: none; */
 }
 </style>

@@ -1,6 +1,18 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Layout from "@/layout/index.vue";
 
+const customRoutes: Array<RouteRecordRaw> = [
+  {
+    path: "/systemSetting/Authority/FuncManage",
+    name: "FuncManage",
+    meta: {
+      title: "功能管理",
+      keepAlive: true,
+      requireAuth: true,
+    },
+    component: () => import("@/pages/systemSetting/authority/funcManage.vue"),
+  },
+];
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/login",
@@ -26,6 +38,7 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import("@/pages/home.vue"),
       },
+      ...customRoutes,
     ],
   },
 ];
@@ -38,6 +51,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   console.log("to", to);
   if (to.path === "/") next({ name: "Login" });
-  else next();
+  else {
+    next();
+  }
 });
 export default router;

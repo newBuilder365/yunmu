@@ -8,5 +8,6 @@ export interface MenuItem {
   title: string;
   code: string;
   icon?: string;
+  url?: string;
   children?: MenuItem[];
 }

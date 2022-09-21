@@ -2,11 +2,21 @@
   --main-bg-color: rgb(62, 62, 116);
   /* 整体框架样式 */
   --main-header-height: 55px;
+  --main-subHeader-height: 45px;
+  --main-subHeader-bgColor: #fff;
   --main-footer-height: 30px;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  /* background-color: var(--main-bg-color); */
   margin: 0px;
   padding: 0px;
+}
+
+.container-inner {
+  background-color: #fff;
+  height: calc(
+    100vh - var(--main-header-height) - var(--main-subHeader-height) -
+      var(--main-footer-height) - 14px
+  );
 }

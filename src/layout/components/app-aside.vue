@@ -11,8 +11,11 @@
     <CustomMenu
       :data="userGlobal.menu"
       active-text-color="skyblue"
+      background-color="rgb(62, 62, 116)"
+      text-color="#fff"
       :collapse="userGlobal.isCollapse"
       :collapse-transition="false"
+      :router="true"
       @open="handleOpen"
       @close="handleClose"
     />
@@ -48,6 +51,7 @@ const onFold = () => {
   justify-content: center;
   color: #fff;
   font-size: 18px;
+  border-right: 1px solid #fff;
 }
 .main-menu-title .el-icon {
   cursor: pointer;
@@ -68,6 +72,9 @@ const onFold = () => {
   height: calc(100% - var(--main-header-height));
   overflow-y: auto;
   overflow-x: hidden;
+  border-right: 1px solid #eaeaea;
+  box-sizing: border-box;
+  background-color: var(--main-bg-color);
 }
 .el-menu-vertical-demo::-webkit-scrollbar {
   width: 0px;
