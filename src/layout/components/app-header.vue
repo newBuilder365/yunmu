@@ -16,6 +16,16 @@
       </el-dropdown>
     </div>
   </div>
+  <div class="main-subHeader">
+    <el-breadcrumb separator="/">
+      <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
+      <el-breadcrumb-item
+        ><a href="/">promotion management</a></el-breadcrumb-item
+      >
+      <el-breadcrumb-item>promotion list</el-breadcrumb-item>
+      <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
+    </el-breadcrumb>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -32,6 +42,15 @@ const logout = () => {
   align-items: center;
   height: var(--main-header-height);
   justify-content: space-between;
+  padding: 0 20px;
+}
+.main-subHeader {
+  height: var(--main-subHeader-height);
+  background-color: var(--main-subHeader-bgColor);
+  width: 100%;
+  box-shadow: 0px 2px 0px #fff;
+  display: flex;
+  align-items: center;
 }
 .main-header .main-header-title {
   font-weight: bold;
