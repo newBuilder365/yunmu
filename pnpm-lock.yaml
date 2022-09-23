@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@element-plus/icons-vue': ^2.0.9
+  '@surely-vue/table': ^2.4.10
   '@types/node': ^18.7.13
   '@typescript-eslint/eslint-plugin': ^5.35.1
   '@typescript-eslint/parser': ^5.35.1
@@ -31,6 +32,7 @@ specifiers:
 
 dependencies:
   '@element-plus/icons-vue': 2.0.9_vue@3.2.37
+  '@surely-vue/table': 2.4.10_jgad6mxlurydh4t4v5wyslxsbm
   '@vue/runtime-core': 3.2.37
   '@vueuse/core': 9.1.1_vue@3.2.37
   ant-design-vue: 3.2.11_vue@3.2.37
@@ -247,6 +249,20 @@ packages:
     dependencies:
       core-js: 3.25.0
       nanopop: 2.1.0
+    dev: false
+
+  /@surely-vue/table/2.4.10_jgad6mxlurydh4t4v5wyslxsbm:
+    resolution: {integrity: sha512-fJlGDdQs43/wtJEYiSzogPQa9NfkvGDLP0RYqYEdvAEm/P49q7lKYifO0Na39wtrFnRJUpJ6uP+5JbrkHLPD/w==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      ant-design-vue: ^2.0.0 || ^3.1.0 || ^3.3.0-0
+      vue: ^3.2.34
+    dependencies:
+      '@ant-design/icons-vue': 6.1.0_vue@3.2.37
+      ant-design-vue: 3.2.11_vue@3.2.37
+      lodash-es: 4.17.21
+      resize-observer-polyfill: 1.5.1
+      vue: 3.2.37
     dev: false
 
   /@sxzz/popperjs-es/2.11.7:

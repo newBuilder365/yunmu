@@ -34,6 +34,7 @@ export const useGlobalStore = defineStore({
         },
       ],
       isCollapse: false,
+      size: "small",
     };
   },
   actions: {
