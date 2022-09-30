@@ -10,5 +10,6 @@ export interface MenuItem {
   code: string;
   icon?: string;
   url?: string;
+  listOrder: number;
   children?: MenuItem[];
 }
